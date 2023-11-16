@@ -1,16 +1,16 @@
-CREATE TABLE Stocks (
+CREATE TABLE IF NOT EXISTS Stocks (
     Name varchar(255) NOT NULL PRIMARY KEY,
     Availability boolean NOT NULL Default true
 );
 
 
-CREATE TABLE Products (
+CREATE TABLE IF NOT EXISTS Products (
     Id varchar(36) NOT NULL PRIMARY KEY,
     Name varchar(255) NOT NULL,
     Size varchar(255)
 );
 
-CREATE TABLE Balance_stocks (
+CREATE TABLE IF NOT EXISTS Balance_stocks (
     ProductsId varchar(36),
     StocksId varchar(255),
     Amount int NOT NULL,
