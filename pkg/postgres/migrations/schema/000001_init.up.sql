@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS Products (
 CREATE TABLE IF NOT EXISTS Balance_stocks (
     ProductsId varchar(36),
     StocksId varchar(255),
-    Amount int NOT NULL,
+    Amount int NOT NULL Default 0,
+    CountReserv int NOT NULL Default 0,
     FOREIGN KEY (ProductsId)  REFERENCES Products (Id),
     FOREIGN KEY (StocksId)  REFERENCES Stocks (Name),
     CONSTRAINT ProdStock PRIMARY KEY (ProductsId,StocksId)

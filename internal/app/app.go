@@ -14,6 +14,10 @@ func Run() {
 
 	pg := postgres.NewPostgres(ctx)
 	dbRepo := repo.NewRepository(pg)
+	err := dbRepo.Reboot(ctx)
+	if err != nil {
+		log.Fatal("dbRepo err reboot: ", err)
+	}
 
 	controller.NewRoute(ctx, dbRepo)
 }
