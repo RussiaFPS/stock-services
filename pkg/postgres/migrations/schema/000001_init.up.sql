@@ -19,3 +19,11 @@ CREATE TABLE IF NOT EXISTS Balance_stocks (
     FOREIGN KEY (StocksId)  REFERENCES Stocks (Name),
     CONSTRAINT ProdStock PRIMARY KEY (ProductsId,StocksId)
 );
+
+insert into stocks (name) values ('t1');
+
+insert into products (id,name) values ('4795435a-a814-4203-8dc6-4bf093bec52e','ball');
+insert into products (id,name) values ('4795435a-a814-4203-8dc6-4bf093bec52r','ked');
+
+insert into balance_stocks (productsid, stocksid, amount) values ('4795435a-a814-4203-8dc6-4bf093bec52e','t1',10);
+insert into balance_stocks (productsid, stocksid, amount) values ('4795435a-a814-4203-8dc6-4bf093bec52r','t1',17);

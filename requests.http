@@ -1,3 +1,4 @@
+### Получение кол-ва оставшихся товаров на складеб на вход принимает название склада
 POST http://localhost:8080/rpc
 Content-Type: application/json
 
@@ -9,8 +10,7 @@ Content-Type: application/json
   "id": 2
 }
 
-###
-
+###  Резервирование товара на складе для доставки, на вход принимает массив из id товара и количество для резервации
 POST http://localhost:8080/rpc
 Content-Type: application/json
 
@@ -25,8 +25,8 @@ Content-Type: application/json
   "id": 1
 }
 
-###
 
+###  Освобождение товара на складе для доставки, на вход принимает массив из id товара и количество для освобождения
 POST http://localhost:8080/rpc
 Content-Type: application/json
 
